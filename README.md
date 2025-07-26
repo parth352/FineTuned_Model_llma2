@@ -1,6 +1,7 @@
 # FineTuned_Model_llma2
 finetuned tinyllama2 model for realEstate based on Indian ministry of housing data
 
+
 # 🤖 Serving AI Model via Google Colab + Ngrok + Postman
 
 This guide explains how to serve a locally trained AI model using **Google Colab**, expose it using **Ngrok**, and hit it via **Postman**. It also explains how to push changes to GitHub directly from Colab.
@@ -28,7 +29,8 @@ This guide explains how to serve a locally trained AI model using **Google Colab
 ## ✅ Step 2: Serve Model in Google Colab
 
 1. Load your fine-tuned model in Colab using `transformers` or `text-generation` libraries.
-2. Start an API server in Colab using **FastAPI** or **Flask**:
+2. Download both models Foundational And Finetuned model (Upload both model on GoogleDrive so Google collab can read it easily and paste the model path in code)
+3. Start an API server in Colab using **FastAPI** or **Flask**:
 
 ```python
 !pip install fastapi uvicorn nest-asyncio pyngrok
@@ -50,3 +52,5 @@ async def chat(input: Input):
 
 nest_asyncio.apply()
 uvicorn.run(app, host="0.0.0.0", port=8000)
+
+
